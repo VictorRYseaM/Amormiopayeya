@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif; /* Fuente principal */
+}
+
+body {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #ff7f7f, #ff1a1a); /* Degradado rojo */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 700px;
+    margin: 20px;
+}
+
+.container .tenor-gif-embed {
+    display: flex;
+    max-width: 200px;
+}
+
+.container .btn {
+    display: flex;
+    gap: 25px;
+}
+
+.btn a {
+    text-decoration: none;
+    color: #111;
+    background: #fff;
+    padding: 10px 25px;
+    border-radius: 8px;
+    box-shadow: 0.5rem 1rem 3rem hsl(0, 0, 0,0.3);
+
+}
+.btn button {
+  text-decoration: none;
+  color: #111;
+  background: #fff;
+  padding: 10px 25px;
+  border-radius: 8px;
+  box-shadow: 0.5rem 1rem 3rem hsl(0, 0%, 0%, 0.3);
+  border: none; /* Elimina el borde predeterminado del botón */
+  cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */
+  font-size: inherit; /* Hereda el tamaño de la fuente del contenedor */
+  font-family: inherit; /* Hereda la fuente del contenedor */
+}
+
+.container h1 {
+    font-family: 'Pacifico', cursive; /* Título con Pacifico */
+    font-size: 2.5rem; /* Ajusta el tamaño según lo necesites */
+    color:rgb(0, 0, 0); /* Color del texto */
+}
+
+.container p {
+    font-family: 'Open Sans', sans-serif; /* Texto con Open Sans */
+    font-size: 1.2rem; /* Ajusta el tamaño según lo necesites */
+    color:rgb(0, 0, 0); /* Color del texto */
+}
+
+#heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+    animation: heartbeat 1s infinite;
+    margin:0 auto
+}
+#heart:before,
+#heart:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: #fff;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+       -moz-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+         -o-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+}
+#heart:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+       -moz-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+         -o-transform-origin: 100% 100%;
+            transform-origin :100% 100%;
+}
+
+
+
+@keyframes heartbeat
+{
+  0%
+  {
+    transform: scale( .75 );
+  }
+  20%
+  {
+    transform: scale( 1 );
+  }
+  40%
+  {
+    transform: scale( .75 );
+  }
+  60%
+  {
+    transform: scale( 1 );
+  }
+  80%
+  {
+    transform: scale( .75 );
+  }
+  100%
+  {
+    transform: scale( .75 );
+  }
+}

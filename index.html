@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Hola mi amorcito</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+        /* Estilos para el iframe */
+        #contentFrame {
+            display: none; /* Oculta el iframe inicialmente */
+            width: 100%;
+            height: 100vh; /* Ocupa toda la altura de la pantalla */
+            border: none; /* Elimina el borde del iframe */
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container" id="mainContainer">
+        <div class="tenor-gif-embed" data-postid="2871482820979272488" data-share-method="host" data-aspect-ratio="1.28351" data-width="100%">
+            <a href="https://tenor.com/view/mochi-pet-mochi-cat-cute-squiddy-gif-2871482820979272488">Mochi Pet GIF</a> from <a href="https://tenor.com/search/mochi-gifs">Mochi GIFs</a>
+        </div>
+        <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+        <h1>Payeya de Amor
+            <br>
+            ¿Quieres ser mi San Valentín? 🥰</h1>
+        <p>Es que te amo mucho mucho muchisimo sisisi</p>
+        <div class="btn">
+            <button onclick="loadPage('si.html')">SI</button>
+            <button onclick="loadPage('no1.html')">NO</button>
+        </div>
+    </div>
+     <!-- Iframe para cargar las páginas secundarias -->
+     <iframe id="contentFrame"></iframe>
+    <audio autoplay>
+        <source src="Los Panchos - Contigo.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+    <script>
+        document.addEventListener('click', function() {
+            var audio = document.querySelector('audio');
+            audio.play();
+        });
+    </script>
+    <script>
+        function loadPage(page) {
+            // Oculta el contenedor principal
+            var container = document.getElementById('mainContainer');
+            container.style.display = 'none';
+
+            // Muestra el iframe y carga la página
+            var iframe = document.getElementById('contentFrame');
+            iframe.style.display = 'block'; // Muestra el iframe
+            iframe.src = page; // Carga la página en el iframe
+        }
+    </script>
+</body>
+</html>
